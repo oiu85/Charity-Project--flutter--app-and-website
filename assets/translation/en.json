@@ -10,6 +10,10 @@
   "login_wrongCode": "Invalid code. Please enter a valid 4-digit code",
   "onboarding_title": "From planting good to harvesting hope",
   "onboarding_description": "Join Bosstani Charity to make a positive difference in your community.",
-  "onboarding_continue": "Continue"
+  "onboarding_continue": "Continue",
+  "onboarding_title_2": "With your Zakat, the doors of blessing open",
+  "onboarding_description_2": "Donate now with Bosstani Charity Foundation. Every dirham multiplies reward and revives hope.",
+  "onboarding_login": "Login",
+  "onboarding_create_account": "Create Account"
 }
 

@@ -13,7 +13,6 @@ class CountryValidator implements InputFieldValidator {
     if (value == null || value.toString().trim().isEmpty) {
       return InputFieldError(LocaleKeys.login_validation_countryRequired.tr());
     }
-
     return InputFieldError.none();
   }
 }

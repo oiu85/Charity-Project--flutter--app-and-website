@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:easy_localization/easy_localization.dart';
 
-class CustomOutlinedButton extends StatelessWidget {
+class CustomFilledButton extends StatelessWidget {
   final String text;
   final VoidCallback? onPressed;
-  final Color? borderColor;
+  final Color? backgroundColor;
   final Color? textColor;
   final double? width;
   final double? height;
@@ -14,11 +14,11 @@ class CustomOutlinedButton extends StatelessWidget {
   final double? borderRadius;
   final EdgeInsetsGeometry? padding;
 
-  const CustomOutlinedButton({
+  const CustomFilledButton({
     super.key,
     required this.text,
     this.onPressed,
-    this.borderColor,
+    this.backgroundColor,
     this.textColor,
     this.width,
     this.height,
@@ -30,17 +30,16 @@ class CustomOutlinedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    
     return InkWell(
       onTap: onPressed,
       child: Container(
         width: width,
         height: height ?? 40.h,
         decoration: ShapeDecoration(
+          color: backgroundColor ?? const Color(0xFF0D9D57),
           shape: RoundedRectangleBorder(
-            side: BorderSide(
-              width: 2.w,
-              color: borderColor ?? Colors.white,
-            ),
             borderRadius: BorderRadius.circular(
               borderRadius ?? 20.r,
             ),
@@ -51,10 +50,9 @@ class CustomOutlinedButton extends StatelessWidget {
         child: Text(
           text.tr(),
           textAlign: TextAlign.center,
-          style: TextStyle(
+          style: theme.textTheme.labelLarge?.copyWith(
             color: textColor ?? Colors.white,
             fontSize: fontSize ?? 16.sp,
-            fontFamily: 'Tajawal',
             fontWeight: fontWeight ?? FontWeight.w700,
             height: 1.40,
             letterSpacing: 0.20,

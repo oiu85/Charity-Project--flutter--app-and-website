@@ -10,6 +10,10 @@
   "login_wrongCode": "رمز غير صحيح. يرجى إدخال رمز صالح مكون من 4 أرقام",
   "onboarding_title": "من زرع الخير إلى \nحصاد الأمل",
   "onboarding_description": "انضم إلى بستاني الخيرية لخلق فرق إيجابي في مجتمعك.",
-  "onboarding_continue": "متابعة"
+  "onboarding_continue": "متابعة",
+  "onboarding_title_2": "بزكاة مالك، تُفتح أبواب البركة",
+  "onboarding_description_2": "تصدق الآن مع مؤسسة بستاني الخيرية، فكل درهم يُضاعف الأجر ويُحيي الأمل",
+  "onboarding_login": "تسجيل دخول",
+  "onboarding_create_account": "إنشاء حساب"
 }
 
