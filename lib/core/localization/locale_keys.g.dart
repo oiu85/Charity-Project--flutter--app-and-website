@@ -12,5 +12,8 @@ abstract class  LocaleKeys {
   static const login_validation_phoneLengthWith0 = 'login_validation_phoneLengthWith0';
   static const login_validation_phoneLengthWithout0 = 'login_validation_phoneLengthWithout0';
   static const login_wrongCode = 'login_wrongCode';
+  static const onboarding_title = 'onboarding_title';
+  static const onboarding_description = 'onboarding_description';
+  static const onboarding_continue = 'onboarding_continue';
 
 }

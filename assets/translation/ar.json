@@ -7,6 +7,9 @@
   "login_validation_phoneDigitsOnly": "رقم الهاتف يجب أن يحتوي على أرقام فقط",
   "login_validation_phoneLengthWith0": "رقم الهاتف يجب أن يكون 10 أرقام عند البدء بصفر",
   "login_validation_phoneLengthWithout0": "رقم الهاتف يجب أن يكون 9 أرقام",
-  "login_wrongCode": "رمز غير صحيح. يرجى إدخال رمز صالح مكون من 4 أرقام"
+  "login_wrongCode": "رمز غير صحيح. يرجى إدخال رمز صالح مكون من 4 أرقام",
+  "onboarding_title": "من زرع الخير إلى \nحصاد الأمل",
+  "onboarding_description": "انضم إلى بستاني الخيرية لخلق فرق إيجابي في مجتمعك.",
+  "onboarding_continue": "متابعة"
 }
 

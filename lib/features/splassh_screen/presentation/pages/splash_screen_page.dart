@@ -1,12 +1,34 @@
 import 'package:charity_project_flutter/core/constant/app_colors.dart';
 import 'package:charity_project_flutter/core/shared/app_scaffold.dart';
+import 'package:charity_project_flutter/core/routing/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'dart:async';
 
 import '../../../../gen/assets.gen.dart';
 
-class SplashScreenPage extends StatelessWidget {
+class SplashScreenPage extends StatefulWidget {
   const SplashScreenPage({super.key});
+
+  @override
+  State<SplashScreenPage> createState() => _SplashScreenPageState();
+}
+
+class _SplashScreenPageState extends State<SplashScreenPage> {
+  @override
+  void initState() {
+    super.initState();
+    _navigateToOnboarding();
+  }
+
+  void _navigateToOnboarding() {
+    Timer(const Duration(seconds: 4), () {
+      if (mounted) {
+        context.go(AppRoutes.onboardingPageOne);
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
