@@ -33,10 +33,9 @@ class OnboardingPageTwo extends StatelessWidget {
                 Expanded(child: SizedBox()),
                 //* Text content
                 Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(
-                      width: 276.w,
                       child: AppText(
                        LocaleKeys.onboarding_title_2,
                         style: theme.textTheme.displayMedium?.copyWith(
