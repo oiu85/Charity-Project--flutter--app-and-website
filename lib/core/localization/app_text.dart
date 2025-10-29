@@ -2,7 +2,6 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart' as easy;
 import 'package:flutter/cupertino.dart';
 import 'package:text_scroll/text_scroll.dart';
-
 class AppText extends StatelessWidget {
   const AppText(
     String this.data, {

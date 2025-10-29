@@ -1,0 +1,12 @@
+{
+  "login_validation_countryRequired": "Country is required",
+  "login_validation_nameRequired": "Name is required",
+  "login_validation_nameMinLength": "Name must be at least 2 characters",
+  "login_validation_nameLettersOnly": "Name must contain only letters and spaces",
+  "login_validation_phoneRequired": "Phone number is required",
+  "login_validation_phoneDigitsOnly": "Phone number must contain only digits",
+  "login_validation_phoneLengthWith0": "Phone number must be 10 digits when starting with 0",
+  "login_validation_phoneLengthWithout0": "Phone number must be 9 digits",
+  "login_wrongCode": "Invalid code. Please enter a valid 4-digit code"
+}
+
