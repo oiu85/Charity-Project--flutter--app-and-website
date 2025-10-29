@@ -1,23 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:charity_project_flutter/core/routing/app_routes.dart';
-import 'package:charity_project_flutter/features/onboarding/presentation/pages/page_one.dart';
+import 'package:charity_project_flutter/features/splassh_screen/presentation/pages/splash_screen_page.dart';
 
 class AppRouter {
   static final GoRouter router = GoRouter(
-    initialLocation: AppRoutes.home,
+    initialLocation: AppRoutes.splash,
     routes: [
       GoRoute(
-        path: AppRoutes.home,
-        name: 'home',
+        path: AppRoutes.splash,
+        name: 'splash',
         pageBuilder: (context, state) =>
-            MaterialPage(key: state.pageKey, child: const PageOne()),
-      ),
-      GoRoute(
-        path: AppRoutes.onboardingPageOne,
-        name: 'onboardingPageOne',
-        pageBuilder: (context, state) =>
-            MaterialPage(key: state.pageKey, child: const PageOne()),
+            MaterialPage(key: state.pageKey, child: const SplashScreenPage()),
       ),
     ],
   );

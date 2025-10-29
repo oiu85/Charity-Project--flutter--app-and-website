@@ -11,6 +11,9 @@
 class FontFamily {
   FontFamily._();
 
+  /// Font family: BebasNeue
+  static const String bebasNeue = 'BebasNeue';
+
   /// Font family: Tajawal
   static const String tajawal = 'Tajawal';
 }

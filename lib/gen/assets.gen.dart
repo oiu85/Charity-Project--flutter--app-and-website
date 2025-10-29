@@ -18,20 +18,37 @@ class $AssetsImagesGen {
   $AssetsImagesPngGen get png => const $AssetsImagesPngGen();
 }
 
+class $AssetsTranslationGen {
+  const $AssetsTranslationGen();
+
+  /// File path: assets/translation/ar.json
+  String get ar => 'assets/translation/ar.json';
+
+  /// File path: assets/translation/en.json
+  String get en => 'assets/translation/en.json';
+
+  /// List of all assets
+  List<String> get values => [ar, en];
+}
+
 class $AssetsImagesPngGen {
   const $AssetsImagesPngGen();
+
+  /// File path: assets/images/png/On_Poarding_background.png
+  AssetGenImage get onPoardingBackground => const AssetGenImage('assets/images/png/On_Poarding_background.png');
 
   /// File path: assets/images/png/bosstani_logo.png
   AssetGenImage get bosstaniLogo => const AssetGenImage('assets/images/png/bosstani_logo.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [bosstaniLogo];
+  List<AssetGenImage> get values => [onPoardingBackground, bosstaniLogo];
 }
 
 class Assets {
   const Assets._();
 
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsTranslationGen translation = $AssetsTranslationGen();
 }
 
 class AssetGenImage {

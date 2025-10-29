@@ -5,8 +5,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../gen/assets.gen.dart';
 
-class PageOne extends StatelessWidget {
-  const PageOne({super.key});
+class SplashScreenPage extends StatelessWidget {
+  const SplashScreenPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -69,3 +69,4 @@ class PageOne extends StatelessWidget {
     );
   }
 }
+

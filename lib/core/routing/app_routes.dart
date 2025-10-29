@@ -1,6 +1,6 @@
 abstract class AppRoutes {
-  static const String home = '/';
-  static const String onboardingPageOne = '/onboarding/page-one';
+  static const String splash = '/';
+  static const String home = '/home';
   
   // Add more routes here as needed
   // static const String login = '/login';
