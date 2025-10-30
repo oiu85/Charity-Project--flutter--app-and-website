@@ -96,7 +96,7 @@ class _SignupPageState extends State<SignupPage> {
                      },
                    ),
                  ),
-                SizedBox(height: 18.h),
+                SizedBox(height: 8.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   mainAxisSize: MainAxisSize.min,

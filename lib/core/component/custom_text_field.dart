@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:charity_project_flutter/core/constant/app_colors.dart';
 import 'package:charity_project_flutter/core/localization/app_text.dart';
 
-class CustomTextField extends StatelessWidget {
+class CustomTextField extends StatefulWidget {
   final String? labelText; // Not translated here; pass localized text
   final String? hintText;  // Not translated here; pass localized text
   final TextEditingController? controller;
@@ -28,11 +28,24 @@ class CustomTextField extends StatelessWidget {
   });
 
   @override
+  State<CustomTextField> createState() => _CustomTextFieldState();
+}
+
+class _CustomTextFieldState extends State<CustomTextField> {
+  late bool _obscure;
+
+  @override
+  void initState() {
+    super.initState();
+    _obscure = widget.obscureText;
+  }
+
+  @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
 
-    final double effectiveWidth = width ?? 325.w;
-    final double effectiveHeight = height ?? 75.h;
+    final double effectiveWidth = widget.width ?? 325.w;
+    final double effectiveHeight = widget.height ?? 75.h;
     final double contentVerticalPadding = ((effectiveHeight) - 50.h) / 2;
 
     final borderRadius = BorderRadius.circular(40.r);
@@ -42,11 +55,11 @@ class CustomTextField extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          if (labelText != null && labelText!.isNotEmpty)
+          if (widget.labelText != null && widget.labelText!.isNotEmpty)
             Padding(
               padding: EdgeInsets.only(bottom: 6.h, right: 6.w),
               child: AppText(
-                labelText!,
+                widget.labelText!,
                 translation: false,
                 textAlign: TextAlign.right,
                 style: theme.textTheme.labelLarge?.copyWith(
@@ -60,10 +73,10 @@ class CustomTextField extends StatelessWidget {
           Container(
             height: effectiveHeight,
             child: TextField(
-              controller: controller,
-              keyboardType: keyboardType,
-              obscureText: obscureText,
-              onChanged: onChanged,
+              controller: widget.controller,
+              keyboardType: widget.keyboardType,
+              obscureText: _obscure,
+              onChanged: widget.onChanged,
               textAlign: TextAlign.right,
               textAlignVertical: TextAlignVertical.center,
               style: theme.textTheme.bodyMedium?.copyWith(
@@ -81,13 +94,23 @@ class CustomTextField extends StatelessWidget {
                   horizontal: 20.w,
                   vertical: contentVerticalPadding.clamp(0, double.infinity),
                 ),
-                hintText: hintText,
+                hintText: widget.hintText,
                 hintStyle: theme.textTheme.bodyMedium?.copyWith(
                   color: AppColors.primary,
                   fontWeight: FontWeight.w500,
                   fontSize: 14.sp,
                   height: 1.64,
                 ),
+                suffixIcon: widget.obscureText
+                    ? IconButton(
+                        splashRadius: 18.r,
+                        icon: Icon(
+                          _obscure ? Icons.visibility_off : Icons.visibility,
+                          color: AppColors.primary,
+                        ),
+                        onPressed: () => setState(() => _obscure = !_obscure),
+                      )
+                    : null,
                 border: OutlineInputBorder(
                   borderRadius: borderRadius,
                   borderSide: BorderSide.none,
