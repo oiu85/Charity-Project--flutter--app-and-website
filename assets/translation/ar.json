@@ -1,19 +1,37 @@
 {
-  "login_validation_countryRequired": "البلد مطلوب",
-  "login_validation_nameRequired": "الاسم مطلوب",
-  "login_validation_nameMinLength": "الاسم يجب أن يكون على الأقل حرفين",
-  "login_validation_nameLettersOnly": "الاسم يجب أن يحتوي على أحرف ومسافات فقط",
-  "login_validation_phoneRequired": "رقم الهاتف مطلوب",
-  "login_validation_phoneDigitsOnly": "رقم الهاتف يجب أن يحتوي على أرقام فقط",
-  "login_validation_phoneLengthWith0": "رقم الهاتف يجب أن يكون 10 أرقام عند البدء بصفر",
-  "login_validation_phoneLengthWithout0": "رقم الهاتف يجب أن يكون 9 أرقام",
-  "login_wrongCode": "رمز غير صحيح. يرجى إدخال رمز صالح مكون من 4 أرقام",
-  "onboarding_title": "من زرع الخير إلى \nحصاد الأمل",
-  "onboarding_description": "انضم إلى بستاني الخيرية لخلق فرق إيجابي في مجتمعك.",
-  "onboarding_continue": "متابعة",
-  "onboarding_title_2": "بزكاة مالك، تُفتح \n أبواب البركة",
-  "onboarding_description_2": "تصدق الآن مع مؤسسة بستاني الخيرية، فكل درهم يُضاعف الأجر ويُحيي الأمل",
-  "onboarding_login": "تسجيل دخول",
-  "onboarding_create_account": "إنشاء حساب"
+  "onboarding": {
+    "title": "من زرع الخير إلى \nحصاد الأمل",
+    "description": "انضم إلى بستاني الخيرية لخلق فرق إيجابي في مجتمعك.",
+    "continue": "متابعة",
+    "title2": "بزكاة مالك، تُفتح \n أبواب البركة",
+    "description2": "تصدق الآن مع مؤسسة بستاني الخيرية، فكل درهم يُضاعف الأجر ويُحيي الأمل",
+    "login": "تسجيل دخول",
+    "createAccount": "إنشاء حساب"
+  },
+  "signup": {
+    "title": "إنشاء حساب",
+    "usernameLabel": "اسم المستخدم",
+    "usernameHint": "أدخل اسمك هنا",
+    "emailLabel": "البريد الالكتروني",
+    "emailHint": "example@email.com",
+    "passwordLabel": "كلمة المرور",
+    "passwordHint": "********",
+    "submit": "إنشاء حساب جديد",
+    "haveAccount": "لديك حساب سابق؟",
+    "login": "تسجيل دخول"
+  },
+  "login": {
+    "wrongCode": "رمز غير صحيح. يرجى إدخال رمز صالح مكون من 4 أرقام",
+    "validation": {
+      "nameRequired": "الاسم مطلوب",
+      "nameMinLength": "الاسم يجب أن يكون على الأقل حرفين",
+      "nameLettersOnly": "الاسم يجب أن يحتوي على أحرف ومسافات فقط",
+      "countryRequired": "البلد مطلوب",
+      "phoneRequired": "رقم الهاتف مطلوب",
+      "phoneDigitsOnly": "رقم الهاتف يجب أن يحتوي على أرقام فقط",
+      "phoneLengthWith0": "رقم الهاتف يجب أن يكون 10 أرقام عند البدء بصفر",
+      "phoneLengthWithout0": "رقم الهاتف يجب أن يكون 9 أرقام"
+    }
+  }
 }
 

@@ -3,21 +3,35 @@
 // ignore_for_file: constant_identifier_names
 
 abstract class  LocaleKeys {
-  static const login_validation_countryRequired = 'login_validation_countryRequired';
-  static const login_validation_nameRequired = 'login_validation_nameRequired';
-  static const login_validation_nameMinLength = 'login_validation_nameMinLength';
-  static const login_validation_nameLettersOnly = 'login_validation_nameLettersOnly';
-  static const login_validation_phoneRequired = 'login_validation_phoneRequired';
-  static const login_validation_phoneDigitsOnly = 'login_validation_phoneDigitsOnly';
-  static const login_validation_phoneLengthWith0 = 'login_validation_phoneLengthWith0';
-  static const login_validation_phoneLengthWithout0 = 'login_validation_phoneLengthWithout0';
-  static const login_wrongCode = 'login_wrongCode';
-  static const onboarding_title = 'onboarding_title';
-  static const onboarding_description = 'onboarding_description';
-  static const onboarding_continue = 'onboarding_continue';
-  static const onboarding_title_2 = 'onboarding_title_2';
-  static const onboarding_description_2 = 'onboarding_description_2';
-  static const onboarding_login = 'onboarding_login';
-  static const onboarding_create_account = 'onboarding_create_account';
+  static const onboarding_title = 'onboarding.title';
+  static const onboarding_description = 'onboarding.description';
+  static const onboarding_continue = 'onboarding.continue';
+  static const onboarding_title2 = 'onboarding.title2';
+  static const onboarding_description2 = 'onboarding.description2';
+  static const onboarding_login = 'onboarding.login';
+  static const onboarding_createAccount = 'onboarding.createAccount';
+  static const onboarding = 'onboarding';
+  static const signup_title = 'signup.title';
+  static const signup_usernameLabel = 'signup.usernameLabel';
+  static const signup_usernameHint = 'signup.usernameHint';
+  static const signup_emailLabel = 'signup.emailLabel';
+  static const signup_emailHint = 'signup.emailHint';
+  static const signup_passwordLabel = 'signup.passwordLabel';
+  static const signup_passwordHint = 'signup.passwordHint';
+  static const signup_submit = 'signup.submit';
+  static const signup_haveAccount = 'signup.haveAccount';
+  static const signup_login = 'signup.login';
+  static const signup = 'signup';
+  static const login_wrongCode = 'login.wrongCode';
+  static const login_validation_nameRequired = 'login.validation.nameRequired';
+  static const login_validation_nameMinLength = 'login.validation.nameMinLength';
+  static const login_validation_nameLettersOnly = 'login.validation.nameLettersOnly';
+  static const login_validation_countryRequired = 'login.validation.countryRequired';
+  static const login_validation_phoneRequired = 'login.validation.phoneRequired';
+  static const login_validation_phoneDigitsOnly = 'login.validation.phoneDigitsOnly';
+  static const login_validation_phoneLengthWith0 = 'login.validation.phoneLengthWith0';
+  static const login_validation_phoneLengthWithout0 = 'login.validation.phoneLengthWithout0';
+  static const login_validation = 'login.validation';
+  static const login = 'login';
 
 }

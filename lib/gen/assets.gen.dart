@@ -40,8 +40,11 @@ class $AssetsImagesPngGen {
   /// File path: assets/images/png/bosstani_logo.png
   AssetGenImage get bosstaniLogo => const AssetGenImage('assets/images/png/bosstani_logo.png');
 
+  /// File path: assets/images/png/sign_up_back_ground.png
+  AssetGenImage get signUpBackGround => const AssetGenImage('assets/images/png/sign_up_back_ground.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [onPoardingBackground, bosstaniLogo];
+  List<AssetGenImage> get values => [onPoardingBackground, bosstaniLogo, signUpBackGround];
 }
 
 class Assets {

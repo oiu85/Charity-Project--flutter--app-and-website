@@ -12,7 +12,8 @@ class AppColors {
   //* Surface & Background
   static const Color surface = Colors.white;
   static const Color background = Colors.white;
-  
+  //* black
+  static const Color black = Colors.black;
   //* Border & Shadow
   static const Color textFiledBorder = Color(0xFFE0E0E0);
   static const Color shadowLight = Color(0x1A000000);

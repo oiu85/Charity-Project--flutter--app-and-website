@@ -3,6 +3,8 @@ import 'package:charity_project_flutter/core/component/custom_outlined_button.da
 import 'package:charity_project_flutter/core/localization/app_text.dart';
 import 'package:charity_project_flutter/core/localization/locale_keys.g.dart';
 import 'package:charity_project_flutter/core/shared/app_scaffold.dart';
+import 'package:charity_project_flutter/core/routing/app_routes.dart';
+import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../gen/assets.gen.dart';
@@ -37,7 +39,7 @@ class OnboardingPageTwo extends StatelessWidget {
                   children: [
                     SizedBox(
                       child: AppText(
-                       LocaleKeys.onboarding_title_2,
+                       LocaleKeys.onboarding_title2,
                         style: theme.textTheme.displayMedium?.copyWith(
                           color: Colors.white,
                           fontWeight: FontWeight.w700,
@@ -51,7 +53,7 @@ class OnboardingPageTwo extends StatelessWidget {
                     SizedBox(
                       width: double.infinity,
                       child: AppText(
-                        LocaleKeys.onboarding_description_2,
+                        LocaleKeys.onboarding_description2,
                         style: theme.textTheme.headlineSmall?.copyWith(
                           color: Colors.white,
                           fontWeight: FontWeight.w700,
@@ -74,7 +76,8 @@ class OnboardingPageTwo extends StatelessWidget {
                     SizedBox(height: 23.h),
                     //* Create Account Button (Outlined)
                     CustomOutlinedButton(
-                      text: LocaleKeys.onboarding_create_account,
+                      text: LocaleKeys.onboarding_createAccount,
+                      onPressed: () => context.go(AppRoutes.signup),
                     ),
                   ],
                 ),
