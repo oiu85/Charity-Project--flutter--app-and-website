@@ -89,6 +89,7 @@ class _LoginPageState extends State<LoginPage> {
                       LocaleKeys.login_forgotPassword,
                       style: theme.textTheme.bodyMedium?.copyWith(
                         fontWeight: FontWeight.w700,
+                        color: AppColors.secondary,
                         fontSize: 14.sp,
                       ),
                     ),
