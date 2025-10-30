@@ -37,6 +37,9 @@ class $AssetsImagesPngGen {
   /// File path: assets/images/png/On_Poarding_background.png
   AssetGenImage get onPoardingBackground => const AssetGenImage('assets/images/png/On_Poarding_background.png');
 
+  /// Directory path: assets/images/png/auth
+  $AssetsImagesPngAuthGen get auth => const $AssetsImagesPngAuthGen();
+
   /// File path: assets/images/png/bosstani_logo.png
   AssetGenImage get bosstaniLogo => const AssetGenImage('assets/images/png/bosstani_logo.png');
 
@@ -45,6 +48,16 @@ class $AssetsImagesPngGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [onPoardingBackground, bosstaniLogo, signUpBackGround];
+}
+
+class $AssetsImagesPngAuthGen {
+  const $AssetsImagesPngAuthGen();
+
+  /// File path: assets/images/png/auth/right_coulmn.png
+  AssetGenImage get rightCoulmn => const AssetGenImage('assets/images/png/auth/right_coulmn.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [rightCoulmn];
 }
 
 class Assets {

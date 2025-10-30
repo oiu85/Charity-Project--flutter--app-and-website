@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:go_router/go_router.dart';
 import 'package:charity_project_flutter/core/routing/app_routes.dart';
 import 'package:charity_project_flutter/features/splassh_screen/presentation/pages/splash_screen_page.dart';
@@ -10,6 +11,16 @@ import 'package:charity_project_flutter/features/auth/presentation/pages/login_p
 class AppRouter {
   static final GoRouter router = GoRouter(
     initialLocation: AppRoutes.splash,
+    redirect: (context, state) {
+      // On web, skip splash/onboarding and go straight to login
+      if (kIsWeb) {
+        final loc = state.matchedLocation;
+        if (loc == AppRoutes.splash || loc.startsWith('/onboarding')) {
+          return AppRoutes.login;
+        }
+      }
+      return null;
+    },
     routes: [
       GoRoute(
         path: AppRoutes.splash,
