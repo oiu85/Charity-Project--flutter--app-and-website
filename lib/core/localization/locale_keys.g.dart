@@ -22,6 +22,15 @@ abstract class  LocaleKeys {
   static const signup_haveAccount = 'signup.haveAccount';
   static const signup_login = 'signup.login';
   static const signup = 'signup';
+  static const login_title = 'login.title';
+  static const login_emailLabel = 'login.emailLabel';
+  static const login_emailHint = 'login.emailHint';
+  static const login_passwordLabel = 'login.passwordLabel';
+  static const login_passwordHint = 'login.passwordHint';
+  static const login_forgotPassword = 'login.forgotPassword';
+  static const login_submit = 'login.submit';
+  static const login_noAccount = 'login.noAccount';
+  static const login_createAccount = 'login.createAccount';
   static const login_wrongCode = 'login.wrongCode';
   static const login_validation_nameRequired = 'login.validation.nameRequired';
   static const login_validation_nameMinLength = 'login.validation.nameMinLength';

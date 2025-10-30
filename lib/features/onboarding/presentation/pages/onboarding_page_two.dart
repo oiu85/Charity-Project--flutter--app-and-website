@@ -72,6 +72,7 @@ class OnboardingPageTwo extends StatelessWidget {
                     //* Login Button (Filled)
                     CustomFilledButton(
                       text: LocaleKeys.onboarding_login,
+                      onPressed: () => context.go(AppRoutes.login),
                     ),
                     SizedBox(height: 23.h),
                     //* Create Account Button (Outlined)

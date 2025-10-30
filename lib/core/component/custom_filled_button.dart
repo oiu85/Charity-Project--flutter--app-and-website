@@ -36,7 +36,7 @@ class CustomFilledButton extends StatelessWidget {
     return InkWell(
       onTap: onPressed,
       child: Container(
-        width: width,
+        width: width ?? 342.w,
         height: height ?? 40.h,
         decoration: ShapeDecoration(
           color: backgroundColor ?? const Color(0xFF0D9D57),

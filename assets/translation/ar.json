@@ -21,6 +21,15 @@
     "login": "تسجيل دخول"
   },
   "login": {
+    "title": "أهلاً بعودتك",
+    "emailLabel": "البريد الالكتروني",
+    "emailHint": "example@email.com",
+    "passwordLabel": "كلمة المرور",
+    "passwordHint": "********",
+    "forgotPassword": "هل نسيت كلمة المرور؟",
+    "submit": "تسجيل دخول",
+    "noAccount": "ليس لديك حساب سابق؟ ",
+    "createAccount": "إنشاء حساب",
     "wrongCode": "رمز غير صحيح. يرجى إدخال رمز صالح مكون من 4 أرقام",
     "validation": {
       "nameRequired": "الاسم مطلوب",

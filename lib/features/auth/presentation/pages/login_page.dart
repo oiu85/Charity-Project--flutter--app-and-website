@@ -1,31 +1,29 @@
 import 'package:charity_project_flutter/core/component/custom_filled_button.dart';
 import 'package:charity_project_flutter/core/component/custom_text_field.dart';
+import 'package:charity_project_flutter/core/constant/app_colors.dart';
 import 'package:charity_project_flutter/core/localization/app_text.dart';
 import 'package:charity_project_flutter/core/localization/locale_keys.g.dart';
+import 'package:charity_project_flutter/core/routing/app_routes.dart';
 import 'package:charity_project_flutter/core/shared/app_scaffold.dart';
-import 'package:charity_project_flutter/core/constant/app_colors.dart';
 import 'package:charity_project_flutter/gen/assets.gen.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:charity_project_flutter/core/routing/app_routes.dart';
 
-class SignupPage extends StatefulWidget {
-  const SignupPage({super.key});
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
 
   @override
-  State<SignupPage> createState() => _SignupPageState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _SignupPageState extends State<SignupPage> {
-  final TextEditingController _nameController = TextEditingController();
+class _LoginPageState extends State<LoginPage> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
   @override
   void dispose() {
-    _nameController.dispose();
     _emailController.dispose();
     _passwordController.dispose();
     super.dispose();
@@ -45,17 +43,21 @@ class _SignupPageState extends State<SignupPage> {
             alignment: Alignment.center,
           ),
         ),
-         child: Align(
-           alignment: Alignment.topCenter,
-           child: SingleChildScrollView(
-             padding: EdgeInsets.symmetric(horizontal: 24.w),
+        child: Align(
+          alignment: Alignment.topCenter,
+          child: SingleChildScrollView(
+            padding: EdgeInsets.symmetric(horizontal: 24.w),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Image.asset(Assets.images.png.bosstaniLogo.path, width: 118.w,height: 118.h,),
+                Image.asset(
+                  Assets.images.png.bosstaniLogo.path,
+                  width: 118.w,
+                  height: 118.h,
+                ),
                 SizedBox(height: 24.h),
                 AppText(
-                  LocaleKeys.signup_title,
+                  LocaleKeys.login_title,
                   style: theme.textTheme.displaySmall?.copyWith(
                     fontWeight: FontWeight.w600,
                   ),
@@ -64,57 +66,64 @@ class _SignupPageState extends State<SignupPage> {
                 CustomTextField(
                   width: double.infinity,
                   height: 75.h,
-                  labelText: LocaleKeys.signup_usernameLabel.tr(),
-                  hintText: LocaleKeys.signup_usernameHint.tr(),
-                  controller: _nameController,
-                ),
-
-                CustomTextField(
-                  width: double.infinity,
-                  height: 75.h,
-                  labelText: LocaleKeys.signup_emailLabel.tr(),
-                  hintText: LocaleKeys.signup_emailHint.tr(),
+                  labelText: LocaleKeys.login_emailLabel.tr(),
+                  hintText: LocaleKeys.login_emailHint.tr(),
                   keyboardType: TextInputType.emailAddress,
                   controller: _emailController,
                 ),
                 CustomTextField(
                   width: double.infinity,
                   height: 75.h,
-                  labelText: LocaleKeys.signup_passwordLabel.tr(),
-                  hintText: LocaleKeys.signup_passwordHint.tr(),
+                  labelText: LocaleKeys.login_passwordLabel.tr(),
+                  hintText: LocaleKeys.login_passwordHint.tr(),
                   controller: _passwordController,
                   obscureText: true,
                 ),
-                 SizedBox(height: 43.h),
-                 Center(
-                   child: CustomFilledButton(
-                     text: LocaleKeys.signup_submit,
-                     height: 48.h,
-                     width: 233.w,
-                     onPressed: () {
-                       // TODO: handle sign up
-                     },
-                   ),
-                 ),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: TextButton(
+                    onPressed: () {
+                      // TODO: navigate to forgot password when available
+                    },
+                    child: AppText(
+                      LocaleKeys.login_forgotPassword,
+                      style: theme.textTheme.bodyMedium?.copyWith(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 14.sp,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20.h),
+                Center(
+                  child: CustomFilledButton(
+                    text: LocaleKeys.login_submit,
+                    height: 48.h,
+                    width: 233.w,
+                    onPressed: () {
+                      // TODO: handle login
+                    },
+                  ),
+                ),
                 SizedBox(height: 18.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     AppText(
-                      LocaleKeys.signup_haveAccount,
+                      LocaleKeys.login_noAccount,
                       style: theme.textTheme.bodyMedium?.copyWith(
                         fontWeight: FontWeight.w400,
                         fontSize: 14.sp,
                       ),
                     ),
-                     TextButton(
-                       onPressed: () => context.push(AppRoutes.login),
+                    TextButton(
+                      onPressed: () => context.go(AppRoutes.signup),
                       child: AppText(
-                        LocaleKeys.signup_login,
+                        LocaleKeys.login_createAccount,
                         style: theme.textTheme.bodyMedium?.copyWith(
-                          color: AppColors.secondary,
                           fontWeight: FontWeight.w700,
+                          color: AppColors.secondary,
                           fontSize: 14.sp,
                         ),
                       ),

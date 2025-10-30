@@ -21,6 +21,15 @@
     "login": "Login"
   },
   "login": {
+    "title": "Welcome back",
+    "emailLabel": "Email",
+    "emailHint": "example@email.com",
+    "passwordLabel": "Password",
+    "passwordHint": "********",
+    "forgotPassword": "Forgot password?",
+    "submit": "Login",
+    "noAccount": "Don't have an account? ",
+    "createAccount": "Create Account",
     "wrongCode": "Invalid code. Please enter a valid 4-digit code",
     "validation": {
       "nameRequired": "Name is required",

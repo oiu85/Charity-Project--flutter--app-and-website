@@ -5,6 +5,7 @@ import 'package:charity_project_flutter/features/splassh_screen/presentation/pag
 import 'package:charity_project_flutter/features/onboarding/presentation/pages/onboarding_page_one.dart';
 import 'package:charity_project_flutter/features/onboarding/presentation/pages/onboarding_page_two.dart';
 import 'package:charity_project_flutter/features/auth/presentation/pages/signup_page.dart';
+import 'package:charity_project_flutter/features/auth/presentation/pages/login_page.dart';
 
 class AppRouter {
   static final GoRouter router = GoRouter(
@@ -33,6 +34,12 @@ class AppRouter {
         name: 'signup',
         pageBuilder: (context, state) =>
             MaterialPage(key: state.pageKey, child: const SignupPage()),
+      ),
+      GoRoute(
+        path: AppRoutes.login,
+        name: 'login',
+        pageBuilder: (context, state) =>
+            MaterialPage(key: state.pageKey, child: const LoginPage()),
       ),
     ],
   );
